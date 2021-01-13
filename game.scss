@@ -1,0 +1,145 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    background-color: black;
+    color:white;
+}
+
+body{
+    border:1px solid grey;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+p,li{
+    line-height: 140%;
+    font-size: 15px;
+}
+
+.test{
+    border-radius: 10px;
+    overflow:hidden;
+    border:1px solid grey;
+    width:60%;
+    height:60%;
+    position:relative;
+    margin-bottom:20px;
+    &>div{
+    position:absolute;
+    height:100%;
+    width: 100%;
+    }
+}
+
+.intro{
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 0px 30px;
+   
+    h1{
+        margin-bottom:30px;
+    }
+  
+}
+
+.main-test{
+    display:flex;
+    flex-direction:column;
+    padding: 0px 30px;
+  
+}
+.questions{
+display: flex;    
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height:60%;
+}
+
+.options{
+height:40%;
+
+border:1px solid grey;
+
+    ul{
+        list-style-type: none;
+        display:grid;
+        grid-template-columns: repeat(2,50%);
+        grid-gap:10px;
+        li{
+            text-align:center;
+        border:1px solid grey;
+        padding: 15px;
+        border-radius:5px;
+        }
+    }
+}
+.btn{
+    width: 40%;
+    height:fit-content;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+button{
+    width:80%;
+    background-color: grey;
+    border:1px solid grey;
+    border-radius:10px;
+    padding:10px;
+    outline:none;
+    
+}
+// #btn-2{
+//     display:none;
+// }
+.score{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+
+    h1{
+        margin-bottom:30px;
+    }
+}
+
+
+@media(max-width:700px){
+    .test{
+        height:90%;
+    }
+
+    .questions{
+        height:50%;
+        h2{
+            font-size:20px;
+        }
+    }
+
+    .options{
+        height:fit-content;
+        ul{
+            list-style-type: none;
+            display:grid;
+            grid-template-columns: repeat(1,100%);
+            grid-gap:10px;
+    }
+    .main-test{
+        
+        h2{
+            font-size:25px;
+        }
+    }
+}
+}

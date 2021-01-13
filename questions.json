@@ -1,0 +1,100 @@
+[
+    {
+       "question":"On what day did God create the firmament of heaven?",
+       "options":[
+           "First day",
+           "Second day",
+           "Third day",
+           "Fourth day"
+       ],
+       "correct" : "Second day"
+    },
+
+    {
+        "question":"Adam and Eve had how many children?",
+        "options":[
+            "Four",
+            "Two",
+            "Five",
+            "Three"
+        ],
+        "correct":"Three"
+    },
+
+    {
+        "question":"How old did was Eve when she died?",
+        "options":[
+            "Not stated in the bible",
+            "965",
+            "703",
+            "565"
+        ],
+        "correct":"Not stated in the bible"
+    },
+
+    {
+        "question":"How many wives did Abraham marry",
+        "options":[
+            "One",
+            "Two",
+            "Three",
+            "Four"
+        ],
+        "correct":"Two"
+    },
+
+    {
+        "question":"Abraham had how many sons",
+        "options":[
+            "Ten",
+            "uncountable",
+            "Seven",
+            "Eight"
+        ],
+        "correct":"Eight"
+    },
+
+    {
+        "question":"How many years did Jacod serve Laban in order to marry Rachael",
+        "options":[
+            "Seven",
+            "Fourteen",
+            "Ten",
+            "None of the Above"
+        ],
+        "correct":"Fourteen"
+    },
+
+    {
+        "question":"Jacob had how many sons",
+        "options":[
+            "13",
+            "12",
+            "11",
+            "7"
+        ],
+        "correct":"13"
+    },
+
+    {
+        "question":"___________ changed Jacob's name to Israel?",
+        "options":[
+            "God",
+            "Abraham",
+            "Isaac",
+            "An Angel"
+        ],
+        "correct":"God"
+    },
+
+    {
+        "question":"Esau sold his birth right for_____________?",
+        "options":[
+            "An amount of money",
+            "For His father's blessing",
+            "For Jacob's Porridge",
+            "To Please God"
+        ],
+        "correct":"For Jacob's Porridge"
+    }
+]
