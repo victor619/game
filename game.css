@@ -61,11 +61,18 @@ p, li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px 30px;
 }
 
 .intro h1 {
   margin-bottom: 30px;
+}
+
+.intro p {
+  margin-bottom: 10px;
 }
 
 .main-test {
@@ -105,8 +112,8 @@ p, li {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 

@@ -5,9 +5,10 @@ const intro = document.getElementsByClassName('intro')
 const scorePage =  document.getElementsByClassName('score')
 const score =  document.getElementById('score')
 const message =  document.getElementById('message')
+const timer =  document.getElementsByClassName('timer')
 
 
-
+let seconds = 10
 let index =-1
 let counter = 0
 
@@ -21,6 +22,7 @@ async function quiz(){
    let data = await res.json();
 
    display(data)
+   setInterval(Countdown,1000)
 }   
 
 
@@ -85,12 +87,12 @@ function calculateScore(data){
   let Actualscore = Math.floor((counter / data.length) * 100)
 
  
-    if(Actualscore <90){
+   if(Actualscore <90){
       score.style.color = `Red`
       score.innerHTML = `You got ${Actualscore}%`
       message.innerHTML = `You can do better than this.`
     }
-  
+
     else if(Actualscore>90){
       score.style.color = `yellowgreen`
       score.innerHTML = `You got ${Actualscore}%`
@@ -100,4 +102,22 @@ function calculateScore(data){
 }
 // display reasons for the answers
 // create a timer
+
+function Countdown(){
+ seconds -- 
+
+if(seconds == 0){
+  seconds = 0;
+  scorePage[0].style.zIndex = '3'
+}
+
+else if (seconds < 0){
+  seconds = 0;
+}
+
+else{
+   document.getElementsByClassName(`timer`)[0].innerHTML = seconds
+  }
+}
+
 // create a restart button
