@@ -1,6 +1,6 @@
 [
     {
-       "question":"On what day did God create the firmament of heaven?",
+       "question":"On what day did God create the firmament of heaven ?",
        "options":[
            "First day",
            "Second day",
@@ -33,7 +33,7 @@
     },
 
     {
-        "question":"How many wives did Abraham marry",
+        "question":"How many wives did Abraham marry?",
         "options":[
             "One",
             "Two",
@@ -44,7 +44,7 @@
     },
 
     {
-        "question":"Abraham had how many sons",
+        "question":"Abraham had how many sons?",
         "options":[
             "Ten",
             "uncountable",
@@ -55,7 +55,7 @@
     },
 
     {
-        "question":"How many years did Jacob serve Laban in order to marry Rachael",
+        "question":"How many years did Jacob serve Laban in order to marry Rachael?",
         "options":[
             "Seven",
             "Fourteen",
@@ -66,7 +66,7 @@
     },
 
     {
-        "question":"Jacob had how many sons",
+        "question":"Jacob had how many sons?",
         "options":[
             "13",
             "12",

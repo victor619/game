@@ -1,3 +1,4 @@
+// MY VARIABLES
 const Question = document.getElementsByClassName('questions')
 const Options = document.getElementsByClassName('options')
 const btn = document.getElementsByTagName("button")
@@ -6,33 +7,40 @@ const scorePage =  document.getElementsByClassName('score')
 const score =  document.getElementById('score')
 const message =  document.getElementById('message')
 const timer =  document.getElementsByClassName('timer')
+const solution = document.getElementsByClassName('solution')
+const answers =  document.getElementsByClassName('answers')
 
-
-let seconds = 10
+//set time
+let seconds = 20
 let index =-1
 let counter = 0
 
+// ===================================================================================================
+// EVENT EVENTLISTENERS
 
-btn[0].addEventListener('click',quiz)
+btn[0].addEventListener('click',Quiz)
+btn[1].addEventListener('click',Answers)
 
+// ===================================================================================================
 
-async function quiz(){
+//FETCH QUESTIONS AND ANSWERS
+async function Quiz(){
 
    let res = await fetch("./questions.json");
    let data = await res.json();
 
-   display(data)
+   Display(data)
    setInterval(Countdown,1000)
 }   
 
+// ====================================================================================================
 
-function display(data){
+// DISPLAY  QUESTIONS
+function Display(data){
 index++
-btn[0].style.display = 'none'
 intro[0].style.display = 'none'
 
 let length = Array.from(data).length
-
 
 if(index<length){
   
@@ -48,18 +56,19 @@ if(index<length){
   Options[0].innerHTML = opt
 }
 else{
-  scorePage[0].style.zIndex = '3'
-alert(`Reload to restart the game`)
+  scorePage[0].style.zIndex = '5'
 }
 
 let li = document.getElementsByTagName('li')
-showScore(li,data)
+ShowScore(li,data)
 
 }
 
 
-function showScore(li,data){
+// ===================================================================================================
 
+// DISPLAY SCORE
+function ShowScore(li,data){
 
   Array.from(li).forEach(x=>x.addEventListener('click',(x)=>{
     let correct = data[index].correct
@@ -67,21 +76,24 @@ function showScore(li,data){
         x.path[0].style.backgroundColor = 'yellowgreen'
         if (true) {
          console.log(data[index], index )
-         calculateScore(data)
+         CalculateScore(data)
 
         }
-        display(data)
+        Display(data)
     }
     else{
         console.log('false')
         x.path[0].style.backgroundColor = 'red'
-        display(data)
+        Display(data)
     }
   })
   )
 }
 
-function calculateScore(data){
+// ====================================================================================================
+
+// CALCULATE SCORE
+function CalculateScore(data){
   counter++
   
   let Actualscore = Math.floor((counter / data.length) * 100)
@@ -100,9 +112,9 @@ function calculateScore(data){
     }
 
 }
-// display reasons for the answers
-// create a timer
+// =====================================================================================================
 
+//TIMER
 function Countdown(){
  seconds -- 
 
@@ -116,8 +128,36 @@ else if (seconds < 0){
 }
 
 else{
-   document.getElementsByClassName(`timer`)[0].innerHTML = seconds
+   document.getElementsByClassName(`timer`)[0].innerHTML = `You have ${seconds} left`
   }
 }
 
-// create a restart button
+// =====================================================================================================
+
+// GET ANSWERS
+async function Answers(){
+
+  let res = await fetch("./questions.json");
+  let data = await res.json();
+
+  Solution(data)
+}   
+
+// ======================================================================================================
+
+// DISPLAY SOLUTION
+function Solution(data){
+let res = Array.from(data)
+solution[0].style.zIndex =`5`;
+
+for (let i = 0; i <res.length; i++) {
+let ans =`<div id ="answer">
+<h3>${res[i].question}<h3>
+<p style = "yellowgreen">${res[i].correct}</p>
+</div>`
+
+  answers[0].insertAdjacentHTML("beforeend",ans)
+}
+} 
+
+// ========================================================================================================
