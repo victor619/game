@@ -11,7 +11,7 @@ const solution = document.getElementsByClassName('solution')
 const answers =  document.getElementsByClassName('answers')
 
 //set time
-let seconds = 20
+let seconds = 30
 let index =-1
 let counter = 0
 
@@ -99,16 +99,19 @@ function CalculateScore(data){
   let Actualscore = Math.floor((counter / data.length) * 100)
 
  
-   if(Actualscore <90){
-      score.style.color = `Red`
+   if(Actualscore <50){
+      score.style.color = `red`
+      message.style.color =`red`
       score.innerHTML = `You got ${Actualscore}%`
       message.innerHTML = `You can do better than this.`
     }
 
-    else if(Actualscore>90){
-      score.style.color = `yellowgreen`
-      score.innerHTML = `You got ${Actualscore}%`
-      message.innerHTML = `You are really smart!`
+
+    else {
+        score.style.color = `yellowgreen`
+        message.style.color =`yellowgreen`
+        score.innerHTML = `You got ${Actualscore}%`
+        message.innerHTML = `You are really smart!`
     }
 
 }
@@ -128,7 +131,7 @@ else if (seconds < 0){
 }
 
 else{
-   document.getElementsByClassName(`timer`)[0].innerHTML = `You have ${seconds} left`
+   document.getElementsByClassName(`timer`)[0].innerHTML = `${seconds} secs left`
   }
 }
 

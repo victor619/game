@@ -1,17 +1,17 @@
 [
     {
-       "question":"On what day did God create the firmament of heaven ?",
+       "question":"In the beginning ____________ created the heavens and the earth",
        "options":[
-           "First day",
-           "Second day",
-           "Third day",
-           "Fourth day"
+           "God",
+           "Man",
+           "Cow",
+           "Chicken"
        ],
-       "correct" : "Second day"
+       "correct" : "God"
     },
 
     {
-        "question":"Adam and Eve had how many children?",
+        "question":"Adam and Eve had how many children before they died?",
         "options":[
             "Four",
             "Two",
@@ -33,7 +33,7 @@
     },
 
     {
-        "question":"How many wives did Abraham marry?",
+        "question":"How many wives did Abraham marry before he died?",
         "options":[
             "One",
             "Two",
@@ -44,14 +44,14 @@
     },
 
     {
-        "question":"Abraham had how many sons?",
+        "question":"Who was the father of Abraham?",
         "options":[
-            "Ten",
-            "uncountable",
-            "Seven",
-            "Eight"
+            "Terah",
+            "Nahor",
+            "Salah",
+            "Arphaxad"
         ],
-        "correct":"Eight"
+        "correct":"Terah"
     },
 
     {
@@ -66,7 +66,7 @@
     },
 
     {
-        "question":"Jacob had how many sons?",
+        "question":"Jacob had how many sons before he died?",
         "options":[
             "13",
             "12",
@@ -96,5 +96,36 @@
             "To Please God"
         ],
         "correct":"For Jacob's Porridge"
+    },
+    {
+        "question":"Moses got married to _________________",
+        "options":[
+            "Mariam",
+            "Ziporrah",
+            "Abigail",
+            "Pharoah's daugther"
+        ],
+        "correct":"Ziporrah"
+    },
+    {
+        "question":"Which of the following is not among the ten commandments?",
+        "options":[
+            "Thou shall not steal",
+            "Thou shall love thy neighbour as thy self",
+            "Thou shall not commit Adultery",
+            "Thou shall not covet thy neighbour's house"
+        ],
+        "correct": "Thou shall love thy neighbour as thy self"
+    },
+
+    {
+        "question":"Who was richest man in the bible",
+        "options":[
+            "King Xerxes of persia",
+            "King Solomon",
+            "King David",
+            "Kind Nebuchadnezzar"
+        ],
+        "correct": "King Solomon"
     }
 ]
