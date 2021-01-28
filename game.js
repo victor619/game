@@ -106,6 +106,13 @@ function CalculateScore(data){
       message.innerHTML = `You can do better than this.`
     }
 
+    else if(Actualscore >=50 && Actualscore <=70){
+      score.style.color = `skyblue`
+      message.style.color =`skyblue`
+      score.innerHTML = `You got ${Actualscore}%`
+      message.innerHTML = `You are smart!`
+  }
+  
 
     else {
         score.style.color = `yellowgreen`
