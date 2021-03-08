@@ -158,8 +158,8 @@ async function Answers(){
 // DISPLAY SOLUTION
 function Solution(data){
 let res = Array.from(data)
-solution[0].style.zIndex =`5`;
-
+solution[0].style.zIndex =`6`;
+seconds = 0;
 for (let i = 0; i <res.length; i++) {
 let ans =`<div id ="answer">
 <h3>${res[i].question}<h3>
