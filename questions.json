@@ -1,12 +1,52 @@
 [
     {
-       "question":"In the beginning ____________ created the heavens and the earth",
+       "question":"Who among the following is not part of the \"Marvel's Avengers\"?",
        "options":[
-           "God",
-           "Man",
-           "Cow",
-           "Chicken"
+           "Iron-man",
+           "Captain-Marvel",
+           "Hulk",
+           "Loki"
        ],
-       "correct" : "God"
-    }
+       "correct" : "Loki"
+    },
+    {
+        "question":"Who beheaded Thanos in the \"Marvel's Avengers End Game\" movie?",
+        "options":[
+            "Iron-man",
+            "Captain-Marvel",
+            "Thor",
+            "Hulk"
+        ],
+        "correct" : "Thor"
+     },
+     {
+        "question":"In the popular Kids movie \"Frozen\", what is the name of Elsa's sister?",
+        "options":[
+            "Cindy",
+            "Ella",
+            "Anna",
+            "Ollie"
+        ],
+        "correct" : "Anna"
+     },
+     {
+        "question":"In the popular kids cartoon \"Tom and Jerry\" what is tom's full name?",
+        "options":[
+            "Thomas",
+            "Tomcat",
+            "Tommy",
+            "TomTom"
+        ],
+        "correct" : "Thomas"
+     },
+     {
+        "question":"What is Spongebob's favorite TV show? ",
+        "options":[
+            "Mermaid-man and Barnicle-boy",
+            "Big-Bass TV show",
+            "Bikini Bottom news",
+            "none"
+        ],
+        "correct" : "Mermaid-man and Barnicle-boy"
+     }
 ]

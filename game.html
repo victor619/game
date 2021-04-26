@@ -2,52 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="game.css">
-    <title>Document</title>
+    <title>Quiz App</title>
 </head>
 <body>
-     <div class="test">
-        <div class="solution">
-            <div class="answers"></div>
-            <a href="game.html">restart</a>
+<div class="wrap">
+    <div class="Intro">
+        <!-- Intro -->
+    <h1>Hey There,</h1>
+    <p>Let's find out how much you about the movie industry </p>
+    <button id="start">start</button>
+    </div>
+
+
+    <div class="Questions"></div>
+    <div class="Score">
+        <div class="links">
+            <a href="/game.html">Restart</a>
+            <button id="Answers">Answers</button>
         </div>
-         <div class="intro">
-             
-             <h1>Bible Quiz</h1>
-             <p>How well have your read the book of Genesis?
-
-                lets find out....
-             </p>
-
-             <div class="btn">
-                <button>start</button>
-             </div>
-        </div>
-       
-        <div class="score">
-            <h1 id="score">You got 0%</h1>
-            <p id="message">Go and read your bible</p>
-
-            <div class="btn">
-                <a href="game.html">restart</a>
-                <button>answers</button>
-            </div>
-          </div>
-          
-         <div class="main-test">
-            <div class="questions"></div>
-            <div class="options"></div>
-         </div>
-
-        
-     </div>
- 
-      
-    <div class="timer"></div>
-
-
-    
+    </div>
+    <div class="Answers">Restart</div>
+</div>
+    <div class="Timer"></div>
     <script src="game.js"></script>
+    <script src="options.js"></script>
 </body>
 </html>
