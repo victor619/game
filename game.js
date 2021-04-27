@@ -38,7 +38,6 @@ Questions.style.zIndex = `5`
 
     let options = document.getElementsByClassName("options")[0]
     CalculateScore(data,options)
-    YourTime()
   }
 
 
@@ -74,18 +73,3 @@ Score.innerHTML=`<h1>${ActualScore}</h1>`
 
 
 //TIMER
-
- function YourTime(){
-  let interval = setInterval(()=>{
-    time--
-    console.log(time)
-    if(time==0){
-      Score.style.zIndex =`6`
-      time = 0
-    }
-    else{
-      console.log(`still counting down to zero`)
-    }
-    Timer.innerHTML =`<h1>${time}</h1>`
-    },1000)
- }
