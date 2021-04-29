@@ -1,5 +1,7 @@
 const Questions = document.getElementsByClassName(`Questions`)[0]
+const score = document.getElementsByClassName(`score`)[0]
 const Score = document.getElementsByClassName(`Score`)[0]
+
 const Answers = document.getElementsByClassName(`Answers`)[0]
 const Timer = document.getElementsByClassName(`Timer`)[0]
 const Start = document.getElementById(`start`)
@@ -12,6 +14,7 @@ async function Quiz(){
   let data = await fetch(`./questions.json`)
   let response = await data.json()
   QuizQuestions(response)
+  setInterval(countdown,1000)
 }
 
 
@@ -33,7 +36,7 @@ Questions.style.zIndex = `5`
     }
 
     else{
-      Score.style.zIndex =`6`      
+      score.style.zIndex =`6`      
     }
 
     let options = document.getElementsByClassName("options")[0]
@@ -68,8 +71,39 @@ function YourScore(data){
   points++
 let ActualScore = (points/data.length)*100
 console.log(ActualScore)
-Score.innerHTML=`<h1>${ActualScore}</h1>`
+Score.innerHTML=`<h1> You Scored ${ActualScore}%</h1>`
+
+if(ActualScore>0 && ActualScore<50){
+Score.style.color = `red`
+}
+else if(ActualScore>50 && ActualScore<70){
+  Score.style.color = `yellow`
+} 
+else if(ActualScore>70 && ActualScore<90){
+  Score.style.color = `blue`
+}
+else{
+  Score.style.color = `yellowgreen`
+
+}
 }
 
 
+
+
 //TIMER
+function countdown(){
+  time--
+  Timer.innerHTML= time
+
+  if(time == 0){
+    time=0
+    score.style.zIndex = 6
+  }
+  else if(time < 0){
+   time = 0
+   Timer.innerHTML = `Time Up`
+  }
+}
+
+
