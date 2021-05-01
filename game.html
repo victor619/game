@@ -8,6 +8,7 @@
     <title>Quiz App</title>
 </head>
 <body>
+
 <div class="wrap">
     <div class="Intro">
         <!-- Intro -->
@@ -15,9 +16,10 @@
     <p>Let's find out how much you about the movie industry </p>
     <button id="start">start</button>
     </div>
+    
+    <div class="Questions">
+    </div>
 
-
-    <div class="Questions"></div>
     <div class="score">
         <h1 class="Score"></h1>
         <div class="links">
@@ -25,9 +27,15 @@
             <button id="Answers">Answers</button>
         </div>
     </div>
-    <div class="Answers">Restart</div>
+
+    <div class="Answers">
+        <h2>The Answers</h2><hr>
+
+        <div class="ans"></div>
+        <a href="/game.html">Restart</a>
+    </div>
 </div>
-    <div class="Timer"></div>
+<p class="Timer"></p>
     <script src="game.js"></script>
     <script src="options.js"></script>
 </body>

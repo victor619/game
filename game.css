@@ -2,11 +2,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 5px;
+  text-align: center;
+  background-color: whitesmoke;
 }
 
 body {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,18 +27,75 @@ body {
 }
 
 .wrap {
-  height: 60%;
-  width: 60%;
+  max-width: 50%;
+  min-width: 400px;
+  margin: auto;
+  height: 100%;
   position: relative;
 }
 
 .wrap > div {
-  height: 100%;
-  position: absolute;
   width: 100%;
+  height: 400px;
+  position: absolute;
 }
 
-.Intro, .score, .Answers {
+.wrap > div p {
+  font-weight: 400;
+  line-height: 145%;
+}
+
+a, button {
+  outline: none;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 10px 20px;
+  background-color: black;
+  color: whitesmoke;
+  font-weight: 200;
+}
+
+a:hover, button:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.Intro {
+  z-index: 5;
+}
+
+.Questions {
+  z-index: 4;
+}
+
+.Questions h2 {
+  font-weight: 200;
+}
+
+.Questions ul {
+  width: 100%;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.Questions ul li {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.Questions ul li:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.score {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,65 +103,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.Questions {
-  background-color: grey;
-  visibility: visible;
-}
-
-.Questions h2 {
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-.Questions ul {
-  list-style: none;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  width: 100%;
-}
-
-.Questions ul li {
-  border: 1px solid green;
-  padding: 10px;
-  text-align: center;
-}
-
-.Timer {
-  padding: 10px;
-}
-
-.Intro {
-  z-index: 4;
-}
-
-.Questions {
-  z-index: 3;
-}
-
-.score {
-  z-index: 2;
-}
-
-.links {
-  width: 100%;
-  height: 20px;
-}
-
-.Answers {
-  z-index: 1;
+.score h1 {
+  font-weight: 100;
 }
 
 @media (max-width: 600px) {

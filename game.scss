@@ -1,11 +1,19 @@
+$primary-color:black;
+$secondary-color:whitesmoke;
+$font-color:rgba(167, 167, 167, 0.788);
+
 *{
     box-sizing: border-box;
     padding:0px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $secondary-color;
+ 
 }
 
 body{
-    height:100vh;
+    height:90vh;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -14,70 +22,73 @@ body{
 }
 
 .wrap{
-    height:60%;
-    width:60%;
-    position: relative;
-&>div{
-
-    height:100%;
-    position: absolute;
-    width:100%;
-}
-}
-
-.Intro,.score,.Answers{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:red;
+   max-width:50%;
+   min-width: 400px;
+   margin:auto;
+   height:100%;
+   position: relative;
+   &>div{
+       width:100%;
+       height:400px;
+       position:absolute;
+       p{
+           font-weight:400;
+           line-height: 145%;
+       }
+   }
 }
 
-.Questions{
-    background-color: grey;
-    visibility: visible;
-    
-    h2{
-        padding: 10px;
-        text-align: center;
-        width:100%;
-
+a,button{
+    outline:none;
+    text-decoration: none;
+    border:1px solid $primary-color;
+    padding:10px 20px;
+    background-color:$primary-color;
+    color:$secondary-color;
+    font-weight: 200;
+    &:hover{
+        background-color: $secondary-color;
+        color:$primary-color
     }
- ul{
-    list-style: none;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    width:100%;
-    li{
-        border:1px solid green;
-        padding:10px;
-        text-align: center;
-    }
- }
-}
-.Timer{
-
-padding:10px;
 }
 
 .Intro{
-z-index:4;
+    z-index: 5;
 }
 .Questions{
-z-index:3;
-
+    h2{
+        font-weight: 200;
+    }
+    z-index:4;
+    ul{
+        width:100%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:10px;
+        li{
+            border: 1px solid $primary-color;
+            padding:10px;
+            background-color:$primary-color;
+            color:$secondary-color;
+            &:hover{
+                background-color: $secondary-color;
+                color:$primary-color
+            }
+        }
+    }
 }
+
 .score{
-z-index:2;
-}
+    z-index:3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.links{
-    width:100%;
-    height:20px;
-}
-.Answers{
-z-index:1;
+    h1{
+        font-weight: 100;
+    }
 }
 
 @media(max-width:600px){
